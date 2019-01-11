@@ -19,6 +19,8 @@
 		3396D3FA21E7961600E5A057 /* StarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D3F921E7961600E5A057 /* StarsViewController.swift */; };
 		3396D40021E7978F00E5A057 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D3FF21E7978F00E5A057 /* AboutViewController.swift */; };
 		3396D40421E7C20300E5A057 /* BlinkingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D40321E7C20300E5A057 /* BlinkingLabel.swift */; };
+		33E335FF21E8187C004711FD /* StarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E335FE21E8187C004711FD /* StarsTableViewCell.swift */; };
+		33E3360121E822BF004711FD /* TableViewCellSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E3360021E822BF004711FD /* TableViewCellSpacer.swift */; };
 		374B530B785B23F1E804E0E9 /* Pods_ShiningStars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC02583B1CEFA9F3055922B /* Pods_ShiningStars.framework */; };
 		4D42DA15E489CBF34A7015EC /* Pods_ShiningStarsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8183FE5B4E8D5B4907A7DE4 /* Pods_ShiningStarsTests.framework */; };
 		E900E8838E71A51944ABB036 /* Pods_ShiningStarsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC114476985A86075C4D800 /* Pods_ShiningStarsUITests.framework */; };
@@ -63,6 +65,8 @@
 		3396D3F921E7961600E5A057 /* StarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsViewController.swift; sourceTree = "<group>"; };
 		3396D3FF21E7978F00E5A057 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3396D40321E7C20300E5A057 /* BlinkingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkingLabel.swift; sourceTree = "<group>"; };
+		33E335FE21E8187C004711FD /* StarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsTableViewCell.swift; sourceTree = "<group>"; };
+		33E3360021E822BF004711FD /* TableViewCellSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSpacer.swift; sourceTree = "<group>"; };
 		9907840A456B465B2D348421 /* Pods-ShiningStarsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiningStarsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiningStarsTests/Pods-ShiningStarsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADC114476985A86075C4D800 /* Pods_ShiningStarsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiningStarsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C678D59DB62E4D8FE1796F3A /* Pods-ShiningStarsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiningStarsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiningStarsTests/Pods-ShiningStarsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 		3396D3F721E795EF00E5A057 /* Stars */ = {
 			isa = PBXGroup;
 			children = (
+				33E335FD21E8185E004711FD /* Cell */,
 				3396D3F821E795F800E5A057 /* View */,
 			);
 			path = Stars;
@@ -233,8 +238,17 @@
 			isa = PBXGroup;
 			children = (
 				3396D40321E7C20300E5A057 /* BlinkingLabel.swift */,
+				33E3360021E822BF004711FD /* TableViewCellSpacer.swift */,
 			);
 			path = UIElements;
+			sourceTree = "<group>";
+		};
+		33E335FD21E8185E004711FD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				33E335FE21E8187C004711FD /* StarsTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B650152E2A90D07EC48F8AF3 /* Pods */ = {
@@ -491,7 +505,9 @@
 				3396D3CF21E7944300E5A057 /* ShiningStars.xcdatamodeld in Sources */,
 				3396D40421E7C20300E5A057 /* BlinkingLabel.swift in Sources */,
 				333977EA21E7CA000025AAE7 /* BlogViewController.swift in Sources */,
+				33E335FF21E8187C004711FD /* StarsTableViewCell.swift in Sources */,
 				3396D3C721E7944300E5A057 /* AppDelegate.swift in Sources */,
+				33E3360121E822BF004711FD /* TableViewCellSpacer.swift in Sources */,
 				33131F3121E7E548005DD5B8 /* Stars.swift in Sources */,
 				3396D40021E7978F00E5A057 /* AboutViewController.swift in Sources */,
 				3396D3FA21E7961600E5A057 /* StarsViewController.swift in Sources */,
