@@ -80,21 +80,50 @@
             </objects>
             <point key="canvasLocation" x="-455" y="-564"/>
         </scene>
-        <!--Stars-->
+        <!--The Stars-->
         <scene sceneID="tn7-Jj-D2T">
             <objects>
                 <viewController id="0nz-Kg-NWc" customClass="StarsViewController" customModule="ShiningStars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eh6-Mb-NhU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="hSz-bu-U2m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="starsCell" id="Btq-IJ-Z1M">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Btq-IJ-Z1M" id="qlU-HP-paS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0nz-Kg-NWc" id="YAz-gb-ToH"/>
+                                    <outlet property="delegate" destination="0nz-Kg-NWc" id="v3x-RO-NQU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hSz-bu-U2m" secondAttribute="bottom" id="4wZ-hE-ihk"/>
+                            <constraint firstAttribute="trailing" secondItem="hSz-bu-U2m" secondAttribute="trailing" id="HW4-ca-CnD"/>
+                            <constraint firstItem="hSz-bu-U2m" firstAttribute="leading" secondItem="Eh6-Mb-NhU" secondAttribute="leading" id="Osy-FP-sPz"/>
+                            <constraint firstItem="hSz-bu-U2m" firstAttribute="top" secondItem="Eh6-Mb-NhU" secondAttribute="top" id="eu7-BQ-F8h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yre-aq-LCE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stars" id="GXz-dj-oun"/>
+                    <navigationItem key="navigationItem" title="The Stars" id="zpK-IF-MMb"/>
+                    <connections>
+                        <outlet property="starsTableView" destination="hSz-bu-U2m" id="06s-bT-msG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wkd-jc-Ebx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-455" y="-1230"/>
+            <point key="canvasLocation" x="484" y="-1230.1349325337333"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="f1z-wF-dVd">
@@ -106,7 +135,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="0nz-Kg-NWc" kind="relationship" relationship="viewControllers" id="qhh-P6-WrF"/>
+                        <segue destination="124-nb-oLM" kind="relationship" relationship="viewControllers" id="qhh-P6-WrF"/>
                         <segue destination="cnn-fL-AI1" kind="relationship" relationship="viewControllers" id="P4m-Ef-BTM"/>
                         <segue destination="glB-kL-oIP" kind="relationship" relationship="viewControllers" id="S8Z-Ai-nvj"/>
                         <segue destination="DQU-4P-KG4" kind="relationship" relationship="viewControllers" id="hIv-oZ-jQg"/>
@@ -150,6 +179,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UKW-rX-GuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-455.19999999999999" y="839.73013493253382"/>
+        </scene>
+        <!--Stars-->
+        <scene sceneID="M6V-pb-n7A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="124-nb-oLM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stars" id="GXz-dj-oun"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zKL-Sb-MjU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0nz-Kg-NWc" kind="relationship" relationship="rootViewController" id="UN6-15-gib"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewb-Vx-O6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-455.19999999999999" y="-1230.1349325337333"/>
         </scene>
     </scenes>
 </document>

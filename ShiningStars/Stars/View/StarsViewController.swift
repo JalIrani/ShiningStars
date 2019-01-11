@@ -8,12 +8,27 @@
 
 import UIKit
 
-class StarsViewController: UIViewController {
+class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    let stars = ["Our Story", "Connect", "Tickets"]
+    @IBOutlet weak var starsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        starsTableView.delegate = self
+        starsTableView.dataSource = self
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return stars.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "starsCell", for: indexPath) as UITableViewCell
+        cell.textLabel?.text = stars[indexPath.row]
+        
+        return cell
     }
     
 
