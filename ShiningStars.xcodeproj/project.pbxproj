@@ -21,6 +21,7 @@
 		3396D40421E7C20300E5A057 /* BlinkingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D40321E7C20300E5A057 /* BlinkingLabel.swift */; };
 		33E335FF21E8187C004711FD /* StarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E335FE21E8187C004711FD /* StarsTableViewCell.swift */; };
 		33E3360121E822BF004711FD /* TableViewCellSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E3360021E822BF004711FD /* TableViewCellSpacer.swift */; };
+		33FA782421E843FF000716E9 /* StarsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FA782321E843FF000716E9 /* StarsDetailViewController.swift */; };
 		374B530B785B23F1E804E0E9 /* Pods_ShiningStars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC02583B1CEFA9F3055922B /* Pods_ShiningStars.framework */; };
 		4D42DA15E489CBF34A7015EC /* Pods_ShiningStarsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8183FE5B4E8D5B4907A7DE4 /* Pods_ShiningStarsTests.framework */; };
 		E900E8838E71A51944ABB036 /* Pods_ShiningStarsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC114476985A86075C4D800 /* Pods_ShiningStarsUITests.framework */; };
@@ -67,6 +68,7 @@
 		3396D40321E7C20300E5A057 /* BlinkingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkingLabel.swift; sourceTree = "<group>"; };
 		33E335FE21E8187C004711FD /* StarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsTableViewCell.swift; sourceTree = "<group>"; };
 		33E3360021E822BF004711FD /* TableViewCellSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSpacer.swift; sourceTree = "<group>"; };
+		33FA782321E843FF000716E9 /* StarsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsDetailViewController.swift; sourceTree = "<group>"; };
 		9907840A456B465B2D348421 /* Pods-ShiningStarsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiningStarsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiningStarsTests/Pods-ShiningStarsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADC114476985A86075C4D800 /* Pods_ShiningStarsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiningStarsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C678D59DB62E4D8FE1796F3A /* Pods-ShiningStarsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiningStarsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiningStarsTests/Pods-ShiningStarsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				3396D3F921E7961600E5A057 /* StarsViewController.swift */,
+				33FA782321E843FF000716E9 /* StarsDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3396D3CF21E7944300E5A057 /* ShiningStars.xcdatamodeld in Sources */,
+				33FA782421E843FF000716E9 /* StarsDetailViewController.swift in Sources */,
 				3396D40421E7C20300E5A057 /* BlinkingLabel.swift in Sources */,
 				333977EA21E7CA000025AAE7 /* BlogViewController.swift in Sources */,
 				33E335FF21E8187C004711FD /* StarsTableViewCell.swift in Sources */,
