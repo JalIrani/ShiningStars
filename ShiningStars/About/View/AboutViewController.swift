@@ -103,7 +103,7 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
             guard let url = URL(string: "https://tickets.vendini.com/ticket-software.html?e=4bab36afd638eb5cabc2cd84d193075e&t=tix&vqitq=0495ad4d-b9aa-41fc-98fc-a1f54b3cfed9&vqitp=bb59f139-959e-4e63-a983-339c1e998b8b&vqitts=1547143563&vqitc=vendini&vqite=itl&vqitrt=Safetynet&vqith=4d0ba58cbff0b769ff7f080d824669b9") else { return }
             UIApplication.shared.open(url)
         default:
-            print("We ran too long")
+            print("We ran way too long")
 
         }
     }
