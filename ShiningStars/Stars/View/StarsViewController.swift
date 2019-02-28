@@ -10,12 +10,13 @@ import UIKit
 
 class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let stars: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
+    let stars: [String] = ["Star1", "Star2", "Star3", "Star4", "Star5"]
+    let buddies: [String] = ["Buddy1", "Buddy2", "Buddy3", "Buddy4", "Buddy5"]
     
-    let cellReuseIdentifier = "cell"
-    let cellSpacingHeight: CGFloat = 10
+    var isStar = true
     
     @IBOutlet weak var starsTableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,51 +25,30 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         starsTableView.dataSource = self
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stars.count
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return cellSpacingHeight
-    }
-    
-    // Make the background color show through
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = UIColor.clear
-        return headerView
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return stars.count
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "starsCell", for: indexPath) as UITableViewCell
-        // add border and color
-        cell.backgroundColor = UIColor.white
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 8
-        cell.clipsToBounds = true
-
-
-//        cell.starsImageView.image = UIImage(named: "me")
-//        cell.nameLabel.text = stars[indexPath.row]
-//        cell.quoteLabel.text = stars[indexPath.row]
-        //cell.textLabel?.text = stars[indexPath.row]
-        //cell.detailTextLabel?.text = stars[indexPath.row]
-        //cell.imageView?.image = UIImage(named: "me")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "starsCell", for: indexPath) as! StarsTableViewCell
+        cell.textLabel?.text = isStar ? stars[indexPath.row] : buddies[indexPath.row]
         return cell
     }
     
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // note that indexPath.section is used rather than indexPath.row
         print("You tapped cell number \(indexPath.section).")
     }
     
-
+    @IBAction func segmentedControlChanged(_ sender: Any) {
+        isStar = !isStar
+        starsTableView.reloadData()
+    }
+    
     /*
     // MARK: - Navigation
 
