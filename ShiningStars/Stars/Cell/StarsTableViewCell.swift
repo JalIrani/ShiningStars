@@ -17,6 +17,13 @@ class StarsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        //headshotImageView.layer.cornerRadius = headshotImageView.frame.size.width / 2
+        //headshotImageView.clipsToBounds = true
+        headshotImageView.layer.cornerRadius = 3
+        headshotImageView.clipsToBounds = true
+        //headshotImageView.layer.borderColor = UIColor.blue.cgColor
+        headshotImageView.layer.borderWidth = 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

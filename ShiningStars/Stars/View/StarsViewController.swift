@@ -55,9 +55,10 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             //cell.textLabel?.text = starArr[indexPath.row].fname
             cell.nameLabel.text = starArr[indexPath.row].fname! + " " + starArr[indexPath.row].lname!
             cell.quoteLabel.text = starArr[indexPath.row].quote!
-            let url = URL(string: starArr[indexPath.row].url!)
-            let data = try? Data(contentsOf: url!)
-            cell.headshotImageView.image = UIImage(data: data!)
+//            let url = URL(string: starArr[indexPath.row].url!)
+//            let data = try? Data(contentsOf: url!)
+            //cell.headshotImageView.image = UIImage(data: data!)
+            cell.headshotImageView.image = UIImage(named: "bman")
         case 1:
             print("Its case 1")
             cell.nameLabel.text = buddiesArr[indexPath.row].fname! + " " + buddiesArr[indexPath.row].lname!
