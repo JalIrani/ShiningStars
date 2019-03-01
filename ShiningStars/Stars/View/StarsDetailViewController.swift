@@ -10,10 +10,11 @@ import UIKit
 
 class StarsDetailViewController: UIViewController {
 
+    var incomingStar:Stars?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(incomingStar?.bio)
     }
     
 

@@ -120,6 +120,7 @@
                                             <outlet property="headshotImageView" destination="drX-7d-xWg" id="V8X-fC-0Fk"/>
                                             <outlet property="nameLabel" destination="pzX-Oz-RnW" id="bod-ha-8C1"/>
                                             <outlet property="quoteLabel" destination="pCt-xV-qsi" id="Mmi-Yb-GGe"/>
+                                            <segue destination="Ae1-af-Ycx" kind="show" identifier="showDetail" id="fUt-LM-2UX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -168,20 +169,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="4RS-IX-u9o">
-                                <rect key="frame" x="109" y="20" width="156" height="128"/>
+                                <rect key="frame" x="109" y="64" width="156" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="BLd-gs-Gc0"/>
                                     <constraint firstAttribute="width" constant="156" id="LFs-ia-e3M"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the quote line, the objective is to fill 2 total lines" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mf-mr-3Vi">
-                                <rect key="frame" x="53" y="175" width="268" height="41"/>
+                                <rect key="frame" x="53" y="219" width="268" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DWa-gJ-iuX">
-                                <rect key="frame" x="53" y="235" width="268" height="264"/>
+                                <rect key="frame" x="53" y="279" width="268" height="171"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

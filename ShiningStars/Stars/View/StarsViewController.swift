@@ -72,7 +72,7 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \(indexPath.section).")
+        print("You tapped cell number \(indexPath.row).")
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -188,14 +188,26 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         starsTableView.reloadData()
     }
     
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showDetail" {
+            if let detailVC = segue.destination as? StarsDetailViewController {
+                if let indexPath = starsTableView.indexPathForSelectedRow {
+                    print("This is the indexpath: \(indexPath.row)")
+                    switch starIndex {
+                    case 0:
+                        detailVC.incomingStar = starArr[indexPath.row]
+                    case 1:
+                        detailVC.incomingStar = buddiesArr[indexPath.row]
+                    case 2:
+                        detailVC.incomingStar = teamArr[indexPath.row]
+                    default:
+                        print("There is no default case")
+                    }
+                }
+            }
+        }
     }
-    */
 
 }
