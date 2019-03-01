@@ -15,10 +15,11 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var starArr: [Stars] = []
-    let buddies: [String] = ["Buddy1", "Buddy2", "Buddy3", "Buddy4", "Buddy5"]
+    var buddiesArr: [Stars] = []
+    var teamArr: [Stars] = []
     let shiningStarsAPI = "https://api.sheety.co/f7c70206-2551-4c49-bfd9-f54c69c274e0"
     
-    var isStar = true
+    var starIndex = 0
     
     @IBOutlet weak var starsTableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -33,12 +34,30 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return isStar ? starArr.count: buddies.count
+        switch starIndex {
+        case 0:
+            return starArr.count
+        case 1:
+            return buddiesArr.count
+        case 2:
+            return teamArr.count
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "starsCell", for: indexPath) as! StarsTableViewCell
-        cell.textLabel?.text = isStar ? starArr[indexPath.row].fname : buddies[indexPath.row]
+        switch starIndex {
+        case 0:
+            cell.textLabel?.text = starArr[indexPath.row].fname
+        case 1:
+            cell.textLabel?.text = buddiesArr[indexPath.row].fname
+        case 2:
+            cell.textLabel?.text = teamArr[indexPath.row].fname
+        default:
+            print("cellForRowAt has run beyond")
+        }
         return cell
     }
     
@@ -57,7 +76,6 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         if let newStar = star as? NSDictionary {
                             
                             let incomingStar = Star(fname: newStar["fname"]! as! String, lname: newStar["lname"]! as! String, bio: newStar["bio"]! as! String, heroes: newStar["heroes"]! as! String, hobbies: newStar["hobbies"]! as! String, quote: newStar["quote"]! as! String, url: newStar["url"]! as! String, type: newStar["type"]! as! String)
-                            print("Right before save stars")
                             
                             self.saveStars(incomingStar: incomingStar)
                         }
@@ -65,18 +83,42 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 }
             }
             self.getStars()
+            self.getBuddies()
+            self.getTeam()
             self.starsTableView.reloadData()
         }
     }
     
     func getStars() {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Stars")
-        let sort = NSSortDescriptor(key: "fname", ascending: true)
-        request.sortDescriptors = [sort]
+        request.predicate = NSPredicate(format: "type = %@", "star")
+//        let sort = NSSortDescriptor(key: "fname", ascending: true)
+//        request.sortDescriptors = [sort]
         do {
             let fetchedStars = try context.fetch(request) as! [Stars]
             starArr = fetchedStars
-            print("This is everything is getData()")
+        } catch {
+            print("Fetching Failed")
+        }
+    }
+    
+    func getBuddies() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Stars")
+        request.predicate = NSPredicate(format: "type = %@", "buddy")
+        do {
+            let fetchedBuddies = try context.fetch(request) as! [Stars]
+            buddiesArr = fetchedBuddies
+        } catch {
+            print("Fetching Failed")
+        }
+    }
+    
+    func getTeam() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Stars")
+        request.predicate = NSPredicate(format: "type = %@", "team")
+        do {
+            let fetchedTeam = try context.fetch(request) as! [Stars]
+            teamArr = fetchedTeam
         } catch {
             print("Fetching Failed")
         }
@@ -124,7 +166,7 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func segmentedControlChanged(_ sender: Any) {
-        isStar = !isStar
+        starIndex = segmentedControl.selectedSegmentIndex
         starsTableView.reloadData()
     }
     

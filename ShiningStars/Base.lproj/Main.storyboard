@@ -115,12 +115,13 @@
                     <navigationItem key="navigationItem" id="zpK-IF-MMb">
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="I2l-xS-huz"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="mbp-Pn-iXF">
-                            <rect key="frame" x="123" y="7" width="129" height="30"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="mbp-Pn-iXF">
+                            <rect key="frame" x="90.5" y="7" width="194" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Stars"/>
                                 <segment title="Buddies"/>
+                                <segment title="Team"/>
                             </segments>
                             <connections>
                                 <action selector="segmentedControlChanged:" destination="0nz-Kg-NWc" eventType="valueChanged" id="e80-wj-vNv"/>
