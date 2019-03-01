@@ -51,24 +51,21 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         Alamofire.request(shiningStarsAPI, method: .get, encoding: JSONEncoding.default).responseJSON { response in
             if response.response?.statusCode == 200 {
                 if let result = response.result.value {
-                    print("Right before delete stars")
                     self.deleteStars()
                     let JSON = result as! Array<Any>
                     for star in JSON {
                         if let newStar = star as? NSDictionary {
+                            
                             let incomingStar = Star(fname: newStar["fname"]! as! String, lname: newStar["lname"]! as! String, bio: newStar["bio"]! as! String, heroes: newStar["heroes"]! as! String, hobbies: newStar["hobbies"]! as! String, quote: newStar["quote"]! as! String, url: newStar["url"]! as! String, type: newStar["type"]! as! String)
                             print("Right before save stars")
+                            
                             self.saveStars(incomingStar: incomingStar)
                         }
                     }
                 }
             }
-            print("Right before get stars")
             self.getStars()
             self.starsTableView.reloadData()
-            for star in self.starArr {
-                print(self.printStar(star: star))
-            }
         }
     }
     
