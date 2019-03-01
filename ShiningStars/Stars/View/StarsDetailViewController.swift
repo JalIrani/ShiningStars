@@ -12,6 +12,7 @@ class StarsDetailViewController: UIViewController {
 
     @IBOutlet weak var headshotImageView: UIImageView!
     @IBOutlet weak var quoteLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
     
     var incomingStar:Stars?
     
@@ -19,7 +20,10 @@ class StarsDetailViewController: UIViewController {
         super.viewDidLoad()
         if let detailStar = incomingStar {
             headshotImageView.image = UIImage(named: "bman")
-            quoteLabel.text = detailStar.quote!
+            guard let quote = detailStar.quote else { return }
+            guard let bio = detailStar.bio else { return }
+            quoteLabel.text = quote
+            bioLabel.text = bio
         }
         
         headshotImageView.layer.cornerRadius = 3

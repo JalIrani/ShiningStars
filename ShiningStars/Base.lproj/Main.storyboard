@@ -181,7 +181,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WVj-Y7-zW5">
-                                        <rect key="frame" x="103" y="8" width="136" height="130"/>
+                                        <rect key="frame" x="103.5" y="8" width="136" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="Sgp-eF-1Km"/>
                                             <constraint firstAttribute="width" constant="136" id="YQS-qS-fa7"/>
@@ -204,7 +204,21 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wY-Ru-U86">
                                 <rect key="frame" x="16" y="312" width="343" height="103"/>
-                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3V-d3-JRX">
+                                        <rect key="frame" x="8" y="8" width="327" height="87"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="o3V-d3-JRX" firstAttribute="trailing" secondItem="9wY-Ru-U86" secondAttribute="trailingMargin" id="420-Gz-Ffv"/>
+                                    <constraint firstItem="o3V-d3-JRX" firstAttribute="bottom" secondItem="9wY-Ru-U86" secondAttribute="bottomMargin" id="G9p-gN-RqY"/>
+                                    <constraint firstItem="o3V-d3-JRX" firstAttribute="top" secondItem="9wY-Ru-U86" secondAttribute="topMargin" id="Hxt-VB-95S"/>
+                                    <constraint firstItem="o3V-d3-JRX" firstAttribute="leading" secondItem="9wY-Ru-U86" secondAttribute="leadingMargin" id="tGo-JU-7ow"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -225,6 +239,7 @@
                         <viewLayoutGuide key="safeArea" id="Q1G-4R-xbT"/>
                     </view>
                     <connections>
+                        <outlet property="bioLabel" destination="o3V-d3-JRX" id="Ph1-En-f5K"/>
                         <outlet property="headshotImageView" destination="WVj-Y7-zW5" id="0Tc-g2-ODy"/>
                         <outlet property="quoteLabel" destination="EGl-A6-lNu" id="xr1-hi-oI7"/>
                     </connections>
