@@ -10,11 +10,22 @@ import UIKit
 
 class StarsDetailViewController: UIViewController {
 
+    @IBOutlet weak var headshotImageView: UIImageView!
+    @IBOutlet weak var quoteLabel: UILabel!
+    
     var incomingStar:Stars?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(incomingStar?.bio)
+        if let detailStar = incomingStar {
+            headshotImageView.image = UIImage(named: "bman")
+            quoteLabel.text = detailStar.quote!
+        }
+        
+        headshotImageView.layer.cornerRadius = 3
+        headshotImageView.clipsToBounds = true
+        headshotImageView.layer.borderColor = UIColor.white.cgColor
+        headshotImageView.layer.borderWidth = 3
     }
     
 
