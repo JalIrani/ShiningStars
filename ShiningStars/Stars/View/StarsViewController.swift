@@ -50,7 +50,12 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "starsCell", for: indexPath) as! StarsTableViewCell
         switch starIndex {
         case 0:
-            cell.textLabel?.text = starArr[indexPath.row].fname
+            //cell.textLabel?.text = starArr[indexPath.row].fname
+            cell.nameLabel.text = starArr[indexPath.row].fname! + " " + starArr[indexPath.row].lname!
+            cell.quoteLabel.text = starArr[indexPath.row].quote!
+            let url = URL(string: starArr[indexPath.row].url!)
+            let data = try? Data(contentsOf: url!)
+            cell.headshotImageView.image = UIImage(data: data!)
         case 1:
             cell.textLabel?.text = buddiesArr[indexPath.row].fname
         case 2:
@@ -64,6 +69,14 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.section).")
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
     func requestStars() {
@@ -166,6 +179,7 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func segmentedControlChanged(_ sender: Any) {
+        print("This is starIndex: \(starIndex)")
         starIndex = segmentedControl.selectedSegmentIndex
         starsTableView.reloadData()
     }

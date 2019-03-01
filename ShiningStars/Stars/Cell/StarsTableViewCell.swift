@@ -10,6 +10,10 @@ import UIKit
 
 class StarsTableViewCell: UITableViewCell {
 
+
+    @IBOutlet weak var headshotImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var quoteLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
