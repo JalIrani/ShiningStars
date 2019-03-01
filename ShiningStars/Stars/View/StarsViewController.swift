@@ -47,9 +47,11 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("Cell for row at")
         let cell = tableView.dequeueReusableCell(withIdentifier: "starsCell", for: indexPath) as! StarsTableViewCell
         switch starIndex {
         case 0:
+            print("Its case 0")
             //cell.textLabel?.text = starArr[indexPath.row].fname
             cell.nameLabel.text = starArr[indexPath.row].fname! + " " + starArr[indexPath.row].lname!
             cell.quoteLabel.text = starArr[indexPath.row].quote!
@@ -57,7 +59,8 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let data = try? Data(contentsOf: url!)
             cell.headshotImageView.image = UIImage(data: data!)
         case 1:
-            cell.textLabel?.text = buddiesArr[indexPath.row].fname
+            print("Its case 1")
+            cell.nameLabel.text = buddiesArr[indexPath.row].fname! + " " + buddiesArr[indexPath.row].lname!
         case 2:
             cell.textLabel?.text = teamArr[indexPath.row].fname
         default:
@@ -179,8 +182,8 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func segmentedControlChanged(_ sender: Any) {
-        print("This is starIndex: \(starIndex)")
         starIndex = segmentedControl.selectedSegmentIndex
+        print("This is starIndex: \(starIndex)")
         starsTableView.reloadData()
     }
     
