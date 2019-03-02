@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		252238BE22287034005465F8 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252238BD22287034005465F8 /* Star.swift */; };
+		25C6BAE5222B297400A65401 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C6BAE4222B297400A65401 /* MediaViewController.swift */; };
+		25C6BAE8222B2C6D00A65401 /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C6BAE7222B2C6D00A65401 /* MediaTableViewCell.swift */; };
 		33131F3121E7E548005DD5B8 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33131F3021E7E548005DD5B8 /* Stars.swift */; };
 		3396D3C721E7944300E5A057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D3C621E7944300E5A057 /* AppDelegate.swift */; };
 		3396D3CC21E7944300E5A057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3396D3CA21E7944300E5A057 /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		093CF8753D1E9B1BDAE7F8AF /* Pods-ShiningStars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiningStars.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiningStars/Pods-ShiningStars.release.xcconfig"; sourceTree = "<group>"; };
 		252238BD22287034005465F8 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		25C6BAE4222B297400A65401 /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MediaViewController.swift; path = ShiningStars/Media/View/MediaViewController.swift; sourceTree = SOURCE_ROOT; };
+		25C6BAE7222B2C6D00A65401 /* MediaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
 		2E4E68BE5257CC15AD71EE97 /* Pods-ShiningStarsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiningStarsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiningStarsUITests/Pods-ShiningStarsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		30C9A50D161E18924E41B970 /* Pods-ShiningStarsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiningStarsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiningStarsUITests/Pods-ShiningStarsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		33131F3021E7E548005DD5B8 /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
@@ -111,6 +115,23 @@
 				252238BD22287034005465F8 /* Star.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		25C6BAE3222B296400A65401 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25C6BAE4222B297400A65401 /* MediaViewController.swift */,
+			);
+			name = View;
+			path = ShiningStars/Media/View;
+			sourceTree = "<group>";
+		};
+		25C6BAE6222B2C5400A65401 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				25C6BAE7222B2C6D00A65401 /* MediaTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		33131F2F21E7E53A005DD5B8 /* Data */ = {
@@ -200,6 +221,8 @@
 		3396D3FC21E7977600E5A057 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				25C6BAE6222B2C5400A65401 /* Cell */,
+				25C6BAE3222B296400A65401 /* View */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -474,20 +497,20 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ShiningStars/Pods-ShiningStars-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ShiningStars/Pods-ShiningStars-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+				"${BUILT_PRODUCTS_DIR}/INSPhotoGallery/INSPhotoGallery.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/INSPhotoGallery.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShiningStars/Pods-ShiningStars-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShiningStars/Pods-ShiningStars-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -506,6 +529,8 @@
 				33E3360121E822BF004711FD /* TableViewCellSpacer.swift in Sources */,
 				33131F3121E7E548005DD5B8 /* Stars.swift in Sources */,
 				3396D40021E7978F00E5A057 /* AboutViewController.swift in Sources */,
+				25C6BAE5222B297400A65401 /* MediaViewController.swift in Sources */,
+				25C6BAE8222B2C6D00A65401 /* MediaTableViewCell.swift in Sources */,
 				3396D3FA21E7961600E5A057 /* StarsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,7 @@ target 'ShiningStars' do
   use_frameworks!
 
   # Pods for ShiningStars
-  pod 'SwiftSoup'
+  pod 'INSPhotoGallery'
   pod 'Alamofire', '~> 4.7'
 
   target 'ShiningStarsTests' do

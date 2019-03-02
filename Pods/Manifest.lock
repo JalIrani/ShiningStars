@@ -1,20 +1,20 @@
 PODS:
   - Alamofire (4.8.0)
-  - SwiftSoup (1.7.4)
+  - INSPhotoGallery (1.2.7)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
-  - SwiftSoup
+  - INSPhotoGallery
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - SwiftSoup
+    - INSPhotoGallery
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
+  INSPhotoGallery: a4e698e3d6338d9016328d6747488a2a111d94e2
 
-PODFILE CHECKSUM: 18ba0303c8a0424ef79c6e2732c36f6e54fa687d
+PODFILE CHECKSUM: 257fbad9e168e175b12711a051e9913f136985cf
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
