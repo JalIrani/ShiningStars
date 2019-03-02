@@ -11,7 +11,7 @@ import UIKit
 class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let sections = ["Our Story", "Connect", "Tickets"]
-    var about = [["Our Mission", "Our History", "Our Team"], ["Podcast", "Donate", "Camp Shine Registration"], ["Get Tickets"]]
+    var about = [["Our Mission", "Our History"], ["Podcast", "Donate", "Camp Shine Registration"], ["Get Tickets"]]
     @IBOutlet weak var aboutTableView: UITableView!
     
     override func viewDidLoad() {
@@ -89,10 +89,9 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
             print("(0,0)")
         case (0,1):
             print("(0,1)")
-        case (0,2):
-            print("(0,2)")
         case (1,0):
-            print("(1,0)")
+            guard let url = URL(string: "http://www.shiningstarsnetwork.org/index.php/podcasts") else { return }
+            UIApplication.shared.open(url)
         case (1,1):
             guard let url = URL(string: "https://givingtools.com/shiningstarsnetwork/") else { return }
             UIApplication.shared.open(url)
