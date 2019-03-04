@@ -22,10 +22,14 @@ class StarsDetailViewController: UIViewController {
         super.viewDidLoad()
         if let detailStar = incomingStar {
             headshotImageView.image = UIImage(named: "bman")
+            guard let firstname = detailStar.fname else { return }
+            guard let lastname = detailStar.lname else { return }
             guard let quote = detailStar.quote else { return }
             guard let bio = detailStar.bio else { return }
             guard let hobbies = detailStar.hobbies else { return }
             guard let heroes = detailStar.heroes else { return }
+            
+            navigationItem.title = firstname + " " + lastname
             
             let hobbiesResult = hobbies.trimmingCharacters(in: CharacterSet(charactersIn: "[]")).components(separatedBy: ",").map {
                 return $0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)

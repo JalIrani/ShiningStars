@@ -81,11 +81,11 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4r-fD-z0E">
                                         <rect key="frame" x="32" y="92" width="311" height="487"/>
-                                        <mutableString key="text">Shining Stars Network is an expansion of the incredibly successful Shining Stars Talent Show – which was created by Sally Curci in 2012 to showcase the various talents of special needs students in Cranford, New Jersey. 
+                                        <string key="text">Shining Stars Network is an expansion of the incredibly successful Shining Stars Talent Show – which was created by Sally Curci in 2012 to showcase the various talents of special needs students in Cranford, New Jersey. 
 
 The annual two-hour variety show sells out the Cranford high school auditorium and is a testament to the power of inclusion. Special needs and non-special needs performers come together in a dazzling display of choreography and teamwork – a culmination of four months of rehearsals and amazing dedication from the students, parents and volunteer buddies from Cranford high school.
 
-Due to the success of the show, Mrs. Curci was awarded the prestigious Betty McGhee Award for her service to the special needs community by the Arc of Union County. Sally was also honored by the Cranford Board of Education for her service to the community. </mutableString>
+Due to the success of the show, Mrs. Curci was awarded the prestigious Betty McGhee Award for her service to the special needs community by the Arc of Union County. Sally was also honored by the Cranford Board of Education for her service to the community. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -127,11 +127,11 @@ Due to the success of the show, Mrs. Curci was awarded the prestigious Betty McG
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyE-4G-Clg">
                                         <rect key="frame" x="32" y="88" width="311" height="491"/>
-                                        <mutableString key="text">Shining Stars Network is a 501(c)(3) nonprofit organization dedicated to shining a light on the special needs community through media, events and experiences.
+                                        <string key="text">Shining Stars Network is a 501(c)(3) nonprofit organization dedicated to shining a light on the special needs community through media, events and experiences.
 
 We create video, photo and editorial content that spotlights the positive and inspiring stories within the special needs community. We host inclusive events that provide opportunities for people with and without special needs to come together. We create and cultivate experiences that enhance the lives of people within the special needs community.
 
-We believe that individuals with special needs have their own unique talents to share with the world. We believe that everyone should have the chance to showcase their abilities and talents. We believe that everyone should have a chance to connect with their community.</mutableString>
+We believe that individuals with special needs have their own unique talents to share with the world. We believe that everyone should have the chance to showcase their abilities and talents. We believe that everyone should have a chance to connect with their community.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -459,7 +459,7 @@ We believe that individuals with special needs have their own unique talents to 
                     </tabBar>
                     <connections>
                         <segue destination="124-nb-oLM" kind="relationship" relationship="viewControllers" id="qhh-P6-WrF"/>
-                        <segue destination="glB-kL-oIP" kind="relationship" relationship="viewControllers" id="S8Z-Ai-nvj"/>
+                        <segue destination="Tse-MX-wgz" kind="relationship" relationship="viewControllers" id="S8Z-Ai-nvj"/>
                         <segue destination="DQU-4P-KG4" kind="relationship" relationship="viewControllers" id="hIv-oZ-jQg"/>
                     </connections>
                 </tabBarController>
@@ -467,7 +467,7 @@ We believe that individuals with special needs have their own unique talents to 
             </objects>
             <point key="canvasLocation" x="-1392" y="-252"/>
         </scene>
-        <!--Media-->
+        <!--Gallery-->
         <scene sceneID="SAR-xB-1Za">
             <objects>
                 <viewController id="glB-kL-oIP" customClass="MediaViewController" customModule="ShiningStars" customModuleProvider="target" sceneMemberID="viewController">
@@ -519,20 +519,20 @@ We believe that individuals with special needs have their own unique talents to 
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o8e-NM-qDs"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Media" id="jIy-Nb-KZb"/>
+                    <navigationItem key="navigationItem" title="Gallery" id="GpS-Sg-02m"/>
                     <connections>
                         <outlet property="collectionView" destination="WIf-eF-gm9" id="wKU-zt-4HK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPI-jk-cGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-474.39999999999998" y="-252.32383808095955"/>
+            <point key="canvasLocation" x="464.80000000000001" y="-252.32383808095955"/>
         </scene>
         <!--About-->
         <scene sceneID="7MT-8v-5tw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQU-4P-KG4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" id="3Pd-cp-zWV"/>
+                    <tabBarItem key="tabBarItem" title="About" image="about" id="3Pd-cp-zWV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="st0-bb-wHb">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -551,7 +551,7 @@ We believe that individuals with special needs have their own unique talents to 
         <scene sceneID="M6V-pb-n7A">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="124-nb-oLM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Stars" id="GXz-dj-oun"/>
+                    <tabBarItem key="tabBarItem" title="Stars" image="star" id="GXz-dj-oun"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zKL-Sb-MjU">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -566,5 +566,29 @@ We believe that individuals with special needs have their own unique talents to 
             </objects>
             <point key="canvasLocation" x="-474" y="-976"/>
         </scene>
+        <!--Gallery-->
+        <scene sceneID="V9t-5z-MUW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tse-MX-wgz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Gallery" image="gallery" id="jIy-Nb-KZb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pcX-2d-caE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="glB-kL-oIP" kind="relationship" relationship="rootViewController" id="NmP-aI-bwP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7G-eo-sYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-474.39999999999998" y="-252.32383808095955"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="about" width="37.5" height="37.5"/>
+        <image name="gallery" width="37.5" height="37.5"/>
+        <image name="star" width="37.5" height="37.5"/>
+    </resources>
 </document>

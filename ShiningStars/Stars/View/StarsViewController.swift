@@ -103,6 +103,7 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.getBuddies()
             self.getTeam()
             self.starsTableView.reloadData()
+            
         }
     }
     
