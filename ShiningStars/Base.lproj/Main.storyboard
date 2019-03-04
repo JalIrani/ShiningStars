@@ -271,7 +271,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="z2W-TG-2Bw">
             <objects>
-                <viewController id="kiu-p4-SP1" customClass="OnboardingViewController" customModule="ShiningStars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController" id="kiu-p4-SP1" customClass="OnboardingViewController" customModule="ShiningStars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xhO-Yg-I8Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -280,13 +280,37 @@
                                 <rect key="frame" x="0.0" y="177" width="375" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Shining Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb6-cU-ir6">
+                                <rect key="frame" x="73" y="66" width="229" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQ9-oS-huk" customClass="ContinueButton" customModule="ShiningStars" customModuleProvider="target">
+                                <rect key="frame" x="82" y="604" width="211" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="qvh-0I-GCm"/>
+                                </constraints>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="conitueButtonTapped:" destination="kiu-p4-SP1" eventType="touchUpInside" id="VBr-iF-r0c"/>
+                                    <segue destination="Nns-4w-sT3" kind="showDetail" id="S7k-Yr-pKb"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="sQ9-oS-huk" firstAttribute="centerX" secondItem="16l-zQ-q68" secondAttribute="centerX" id="3BR-JZ-TaP"/>
                             <constraint firstItem="16l-zQ-q68" firstAttribute="height" secondItem="xhO-Yg-I8Y" secondAttribute="height" multiplier="1:2" id="7Hj-nd-qMY"/>
+                            <constraint firstItem="wb6-cU-ir6" firstAttribute="top" secondItem="SdG-8R-FH6" secondAttribute="top" constant="46" id="Aok-qK-p3U"/>
+                            <constraint firstItem="16l-zQ-q68" firstAttribute="top" secondItem="wb6-cU-ir6" secondAttribute="bottom" constant="88" id="G5f-bn-cbS"/>
+                            <constraint firstAttribute="bottom" secondItem="sQ9-oS-huk" secondAttribute="bottom" constant="20" symbolic="YES" id="Grk-Ns-wnk"/>
                             <constraint firstItem="16l-zQ-q68" firstAttribute="centerY" secondItem="SdG-8R-FH6" secondAttribute="centerY" id="H1q-hd-u7X"/>
+                            <constraint firstItem="sQ9-oS-huk" firstAttribute="leading" secondItem="SdG-8R-FH6" secondAttribute="leading" constant="82" id="JY9-It-o26"/>
+                            <constraint firstItem="wb6-cU-ir6" firstAttribute="centerX" secondItem="16l-zQ-q68" secondAttribute="centerX" id="NBZ-xG-Ga9"/>
                             <constraint firstItem="16l-zQ-q68" firstAttribute="width" secondItem="xhO-Yg-I8Y" secondAttribute="width" id="aPV-8j-gAc"/>
                             <constraint firstItem="16l-zQ-q68" firstAttribute="centerX" secondItem="SdG-8R-FH6" secondAttribute="centerX" id="aY7-Y6-V8N"/>
+                            <constraint firstItem="wb6-cU-ir6" firstAttribute="leading" secondItem="SdG-8R-FH6" secondAttribute="leading" constant="73" id="rZE-2E-WAj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SdG-8R-FH6"/>
                     </view>
@@ -296,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I81-st-70s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2415" y="-283"/>
+            <point key="canvasLocation" x="-2415.1999999999998" y="-282.90854572713647"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="f1z-wF-dVd">

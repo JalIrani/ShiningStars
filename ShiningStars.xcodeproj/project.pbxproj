@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		252238BE22287034005465F8 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252238BD22287034005465F8 /* Star.swift */; };
+		253402A6222D77F400C18D17 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253402A5222D77F400C18D17 /* Buttons.swift */; };
+		253402A9222D787A00C18D17 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253402A8222D787A00C18D17 /* Colors.swift */; };
 		25C6BAE5222B297400A65401 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C6BAE4222B297400A65401 /* MediaViewController.swift */; };
 		25C6BAE8222B2C6D00A65401 /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C6BAE7222B2C6D00A65401 /* MediaTableViewCell.swift */; };
 		25C6BAEC222B335700A65401 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C6BAEB222B335700A65401 /* OnboardingViewController.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		093CF8753D1E9B1BDAE7F8AF /* Pods-ShiningStars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiningStars.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiningStars/Pods-ShiningStars.release.xcconfig"; sourceTree = "<group>"; };
 		252238BD22287034005465F8 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		253402A5222D77F400C18D17 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		253402A8222D787A00C18D17 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		25C6BAE4222B297400A65401 /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MediaViewController.swift; path = ShiningStars/Media/View/MediaViewController.swift; sourceTree = SOURCE_ROOT; };
 		25C6BAE7222B2C6D00A65401 /* MediaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
 		25C6BAEB222B335700A65401 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,14 @@
 				252238BD22287034005465F8 /* Star.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		253402A7222D786F00C18D17 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				253402A8222D787A00C18D17 /* Colors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		25C6BAE3222B296400A65401 /* View */ = {
@@ -265,6 +277,7 @@
 		3396D40121E7C1E600E5A057 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				253402A7222D786F00C18D17 /* Colors */,
 				33131F2F21E7E53A005DD5B8 /* Data */,
 				3396D40221E7C1F100E5A057 /* UIElements */,
 			);
@@ -276,6 +289,7 @@
 			children = (
 				3396D40321E7C20300E5A057 /* BlinkingLabel.swift */,
 				33E3360021E822BF004711FD /* TableViewCellSpacer.swift */,
+				253402A5222D77F400C18D17 /* Buttons.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -542,12 +556,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				25C6BAEC222B335700A65401 /* OnboardingViewController.swift in Sources */,
+				253402A9222D787A00C18D17 /* Colors.swift in Sources */,
 				3396D3CF21E7944300E5A057 /* ShiningStars.xcdatamodeld in Sources */,
 				33FA782421E843FF000716E9 /* StarsDetailViewController.swift in Sources */,
 				252238BE22287034005465F8 /* Star.swift in Sources */,
 				3396D40421E7C20300E5A057 /* BlinkingLabel.swift in Sources */,
 				33E335FF21E8187C004711FD /* StarsTableViewCell.swift in Sources */,
 				3396D3C721E7944300E5A057 /* AppDelegate.swift in Sources */,
+				253402A6222D77F400C18D17 /* Buttons.swift in Sources */,
 				33E3360121E822BF004711FD /* TableViewCellSpacer.swift in Sources */,
 				33131F3121E7E548005DD5B8 /* Stars.swift in Sources */,
 				3396D40021E7978F00E5A057 /* AboutViewController.swift in Sources */,
