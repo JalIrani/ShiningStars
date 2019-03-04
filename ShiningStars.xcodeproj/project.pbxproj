@@ -13,6 +13,7 @@
 		25C6BAE5222B297400A65401 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C6BAE4222B297400A65401 /* MediaViewController.swift */; };
 		25C6BAE8222B2C6D00A65401 /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C6BAE7222B2C6D00A65401 /* MediaTableViewCell.swift */; };
 		25C6BAEC222B335700A65401 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C6BAEB222B335700A65401 /* OnboardingViewController.swift */; };
+		25D6634A222DE3F500053C9A /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D66349222DE3F500053C9A /* ProgramViewController.swift */; };
 		33131F3121E7E548005DD5B8 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33131F3021E7E548005DD5B8 /* Stars.swift */; };
 		3396D3C721E7944300E5A057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D3C621E7944300E5A057 /* AppDelegate.swift */; };
 		3396D3CC21E7944300E5A057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3396D3CA21E7944300E5A057 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		25C6BAE4222B297400A65401 /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MediaViewController.swift; path = ShiningStars/Media/View/MediaViewController.swift; sourceTree = SOURCE_ROOT; };
 		25C6BAE7222B2C6D00A65401 /* MediaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
 		25C6BAEB222B335700A65401 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		25D66349222DE3F500053C9A /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
 		2E4E68BE5257CC15AD71EE97 /* Pods-ShiningStarsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiningStarsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiningStarsUITests/Pods-ShiningStarsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		30C9A50D161E18924E41B970 /* Pods-ShiningStarsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiningStarsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiningStarsUITests/Pods-ShiningStarsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		33131F3021E7E548005DD5B8 /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				3396D3FF21E7978F00E5A057 /* AboutViewController.swift */,
+				25D66349222DE3F500053C9A /* ProgramViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				33131F3121E7E548005DD5B8 /* Stars.swift in Sources */,
 				3396D40021E7978F00E5A057 /* AboutViewController.swift in Sources */,
 				25C6BAE5222B297400A65401 /* MediaViewController.swift in Sources */,
+				25D6634A222DE3F500053C9A /* ProgramViewController.swift in Sources */,
 				25C6BAE8222B2C6D00A65401 /* MediaTableViewCell.swift in Sources */,
 				3396D3FA21E7961600E5A057 /* StarsViewController.swift in Sources */,
 			);

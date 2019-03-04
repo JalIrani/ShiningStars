@@ -53,8 +53,6 @@ class StarsDetailViewController: UIViewController {
             }
             heroesLabel.text = "Heroes:" + heroesString
             
-            //print("heroesString: \(heroesString)")
-            
             quoteLabel.text = quote
             bioLabel.text = bio
         }
