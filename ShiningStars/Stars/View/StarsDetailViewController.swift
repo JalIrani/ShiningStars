@@ -13,6 +13,8 @@ class StarsDetailViewController: UIViewController {
     @IBOutlet weak var headshotImageView: UIImageView!
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var hobbiesLabel: UILabel!
+    @IBOutlet weak var heroesLabel: UILabel!
     
     var incomingStar:Stars?
     
@@ -22,6 +24,33 @@ class StarsDetailViewController: UIViewController {
             headshotImageView.image = UIImage(named: "bman")
             guard let quote = detailStar.quote else { return }
             guard let bio = detailStar.bio else { return }
+            guard let hobbies = detailStar.hobbies else { return }
+            guard let heroes = detailStar.heroes else { return }
+            
+            let hobbiesResult = hobbies.trimmingCharacters(in: CharacterSet(charactersIn: "[]")).components(separatedBy: ",").map {
+                return $0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            }
+            
+            let heroesResult = heroes.trimmingCharacters(in: CharacterSet(charactersIn: "[]")).components(separatedBy: ",").map {
+                return $0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            }
+            
+            var hobbiesString = ""
+            for hobbie in hobbiesResult {
+                hobbiesString = hobbiesString + "\n" + hobbie
+            }
+            hobbiesLabel.text = "Hobbies:" + hobbiesString
+            
+            var heroesString = ""
+            for hero in heroesResult {
+                print("heroesString: \(hero)")
+                heroesString = heroesString + "\n" + hero
+                print("heroesString: \(heroesString)")
+            }
+            heroesLabel.text = "Heroes:" + heroesString
+            
+            //print("heroesString: \(heroesString)")
+            
             quoteLabel.text = quote
             bioLabel.text = bio
         }

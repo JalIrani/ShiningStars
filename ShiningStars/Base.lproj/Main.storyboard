@@ -299,11 +299,39 @@ We believe that individuals with special needs have their own unique talents to 
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fr-2S-01T">
                                         <rect key="frame" x="8" y="8" width="154.5" height="143"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hobbies" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIl-64-OXN">
+                                                <rect key="frame" x="8" y="8" width="139" height="127"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="NIl-64-OXN" firstAttribute="leading" secondItem="8Fr-2S-01T" secondAttribute="leading" constant="8" id="OT2-8M-U5B"/>
+                                            <constraint firstItem="NIl-64-OXN" firstAttribute="top" secondItem="8Fr-2S-01T" secondAttribute="top" constant="8" id="PxL-HJ-x2w"/>
+                                            <constraint firstAttribute="trailing" secondItem="NIl-64-OXN" secondAttribute="trailing" constant="7.5" id="Zy2-yg-Ncb"/>
+                                            <constraint firstAttribute="bottom" secondItem="NIl-64-OXN" secondAttribute="bottom" constant="8" id="fMe-9P-0zh"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1BM-06-njn">
                                         <rect key="frame" x="180.5" y="8" width="154.5" height="143"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heroes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsT-3D-Upr">
+                                                <rect key="frame" x="8" y="8" width="139" height="127"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="LsT-3D-Upr" firstAttribute="leading" secondItem="1BM-06-njn" secondAttribute="leading" constant="8" id="6KV-uQ-TCz"/>
+                                            <constraint firstAttribute="bottom" secondItem="LsT-3D-Upr" secondAttribute="bottom" constant="8" id="Isu-Fa-qT2"/>
+                                            <constraint firstItem="LsT-3D-Upr" firstAttribute="top" secondItem="1BM-06-njn" secondAttribute="top" constant="8" id="UFh-gw-Y89"/>
+                                            <constraint firstAttribute="trailing" secondItem="LsT-3D-Upr" secondAttribute="trailing" constant="7.5" id="bV4-mI-9P1"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -357,6 +385,8 @@ We believe that individuals with special needs have their own unique talents to 
                     <connections>
                         <outlet property="bioLabel" destination="o3V-d3-JRX" id="Ph1-En-f5K"/>
                         <outlet property="headshotImageView" destination="WVj-Y7-zW5" id="0Tc-g2-ODy"/>
+                        <outlet property="heroesLabel" destination="LsT-3D-Upr" id="LxR-5v-fHe"/>
+                        <outlet property="hobbiesLabel" destination="NIl-64-OXN" id="QOB-DE-Y34"/>
                         <outlet property="quoteLabel" destination="EGl-A6-lNu" id="xr1-hi-oI7"/>
                     </connections>
                 </viewController>

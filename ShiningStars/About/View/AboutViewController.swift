@@ -43,44 +43,6 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
-    {
-//        switch section {
-//        case 0:
-//            let header = view as! UITableViewHeaderFooterView
-//            header.textLabel?.font = UIFont(name: "AvenirNext-Medium", size: 20)!
-//        case 1:
-//            let header = view as! UITableViewHeaderFooterView
-//            header.textLabel?.font = UIFont(name: "AvenirNext-Medium", size: 20)!
-//        default:
-//            let header = view as! UITableViewHeaderFooterView
-//            header.textLabel?.font = UIFont(name: "AvenirNext-Medium", size: 20)!
-//        }
-//        header.textLabel?.textColor = UIColor.white
-    }
-//
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 25.0
-//    }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 25.0))
-//        view.backgroundColor = UIColor(red: 253.0/255.0, green: 240.0/255.0, blue: 196.0/255.0, alpha: 1)
-//        let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.width - 30, height: 25.0))
-//        label.font = UIFont.boldSystemFont(ofSize: 15)
-//        label.textColor = UIColor.black
-//        switch section {
-//        case 0:
-//            label.text = "Action"
-//        case 1:
-//            label.text = "Comedy"
-//        default:
-//            label.text = ""
-//        }
-//        view.addSubview(label)
-//        return view
-//    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //guard let cell = tableView.cellForRow(at: indexPath) else { return }
         let selectiion = (indexPath.section, indexPath.row)
