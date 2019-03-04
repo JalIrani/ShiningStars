@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.8.0)
   - INSPhotoGallery (1.2.7)
+  - SwiftVideoBackground (3.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - INSPhotoGallery
+  - SwiftVideoBackground (~> 3.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - INSPhotoGallery
+    - SwiftVideoBackground
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   INSPhotoGallery: a4e698e3d6338d9016328d6747488a2a111d94e2
+  SwiftVideoBackground: 28c37a2cb1bb6162ef179cfd9bb2b08de967b632
 
-PODFILE CHECKSUM: 257fbad9e168e175b12711a051e9913f136985cf
+PODFILE CHECKSUM: 5187298220fb44f51ae0933c1d2b0e329bc3c040
 
 COCOAPODS: 1.6.1

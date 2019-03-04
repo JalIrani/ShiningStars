@@ -7,6 +7,7 @@ target 'ShiningStars' do
 
   # Pods for ShiningStars
   pod 'INSPhotoGallery'
+  pod 'SwiftVideoBackground', '~> 3.0'
   pod 'Alamofire', '~> 4.7'
 
   target 'ShiningStarsTests' do

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nns-4w-sT3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kiu-p4-SP1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -267,6 +267,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7a2-Vm-xN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1356" y="-976.46176911544239"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="z2W-TG-2Bw">
+            <objects>
+                <viewController id="kiu-p4-SP1" customClass="OnboardingViewController" customModule="ShiningStars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xhO-Yg-I8Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16l-zQ-q68">
+                                <rect key="frame" x="0.0" y="177" width="375" height="333.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="16l-zQ-q68" firstAttribute="height" secondItem="xhO-Yg-I8Y" secondAttribute="height" multiplier="1:2" id="7Hj-nd-qMY"/>
+                            <constraint firstItem="16l-zQ-q68" firstAttribute="centerY" secondItem="SdG-8R-FH6" secondAttribute="centerY" id="H1q-hd-u7X"/>
+                            <constraint firstItem="16l-zQ-q68" firstAttribute="width" secondItem="xhO-Yg-I8Y" secondAttribute="width" id="aPV-8j-gAc"/>
+                            <constraint firstItem="16l-zQ-q68" firstAttribute="centerX" secondItem="SdG-8R-FH6" secondAttribute="centerX" id="aY7-Y6-V8N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SdG-8R-FH6"/>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="16l-zQ-q68" id="Qcj-wk-sbv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I81-st-70s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2415" y="-283"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="f1z-wF-dVd">
