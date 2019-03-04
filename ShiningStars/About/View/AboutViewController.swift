@@ -86,8 +86,10 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let selectiion = (indexPath.section, indexPath.row)
         switch selectiion {
         case (0,0):
+            self.performSegue(withIdentifier: "missionSegue", sender: self)
             print("(0,0)")
         case (0,1):
+            self.performSegue(withIdentifier: "historySegue", sender: self)
             print("(0,1)")
         case (1,0):
             guard let url = URL(string: "http://www.shiningstarsnetwork.org/index.php/podcasts") else { return }
