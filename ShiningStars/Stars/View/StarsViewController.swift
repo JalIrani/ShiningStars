@@ -33,6 +33,9 @@ class StarsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         starsTableView.delegate = self
         starsTableView.dataSource = self
+        
+        self.navigationController!.navigationBar.barStyle = .blackTranslucent
+        self.navigationController!.navigationBar.isTranslucent = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
