@@ -14,6 +14,7 @@
 		25C6BAE8222B2C6D00A65401 /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C6BAE7222B2C6D00A65401 /* MediaTableViewCell.swift */; };
 		25C6BAEC222B335700A65401 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C6BAEB222B335700A65401 /* OnboardingViewController.swift */; };
 		25D6634A222DE3F500053C9A /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D66349222DE3F500053C9A /* ProgramViewController.swift */; };
+		25DFF7FD22C10514007DE5DF /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25DFF7FC22C10514007DE5DF /* WebKit.framework */; };
 		33131F3121E7E548005DD5B8 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33131F3021E7E548005DD5B8 /* Stars.swift */; };
 		3396D3C721E7944300E5A057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D3C621E7944300E5A057 /* AppDelegate.swift */; };
 		3396D3CC21E7944300E5A057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3396D3CA21E7944300E5A057 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		25C6BAE7222B2C6D00A65401 /* MediaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
 		25C6BAEB222B335700A65401 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		25D66349222DE3F500053C9A /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
+		25DFF7FC22C10514007DE5DF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		2E4E68BE5257CC15AD71EE97 /* Pods-ShiningStarsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiningStarsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiningStarsUITests/Pods-ShiningStarsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		30C9A50D161E18924E41B970 /* Pods-ShiningStarsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiningStarsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiningStarsUITests/Pods-ShiningStarsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		33131F3021E7E548005DD5B8 /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25DFF7FD22C10514007DE5DF /* WebKit.framework in Frameworks */,
 				374B530B785B23F1E804E0E9 /* Pods_ShiningStars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +324,7 @@
 		FDC9F1EAC207E0A67796F6E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25DFF7FC22C10514007DE5DF /* WebKit.framework */,
 				CAC02583B1CEFA9F3055922B /* Pods_ShiningStars.framework */,
 				C8183FE5B4E8D5B4907A7DE4 /* Pods_ShiningStarsTests.framework */,
 				ADC114476985A86075C4D800 /* Pods_ShiningStarsUITests.framework */,
