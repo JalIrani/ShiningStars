@@ -36,6 +36,11 @@ class MediaViewController: UIViewController {
             INSPhoto(imageURL: URL(string: "http://www.shiningstarsnetwork.org/images/GinaDorothy.JPG"), thumbnailImageURL: URL(string: "http://www.shiningstarsnetwork.org/images/GinaDorothy.JPG")),
             INSPhoto(imageURL: URL(string: "http://www.shiningstarsnetwork.org/images/P1010217.JPG"), thumbnailImageURL: URL(string: "http://www.shiningstarsnetwork.org/images/P1010217.JPG")),
             INSPhoto(imageURL: URL(string: "http://www.shiningstarsnetwork.org/images/STWteam2019.jpg"), thumbnailImageURL: URL(string: "http://www.shiningstarsnetwork.org/images/STWteam2019.jpg")),
+            INSPhoto(imageURL: URL(string: "http://www.shiningstarsnetwork.org/images/IMG_5380.jpg"), thumbnailImageURL: URL(string: "http://www.shiningstarsnetwork.org/images/IMG_5380.jpg")),
+            INSPhoto(imageURL: URL(string: "http://www.shiningstarsnetwork.org/images/Pearl3.JPG"), thumbnailImageURL: URL(string: "http://www.shiningstarsnetwork.org/images/Pearl3.JPG")),
+            INSPhoto(imageURL: URL(string: "http://www.shiningstarsnetwork.org/images/AndrewXmas.JPG"), thumbnailImageURL: URL(string: "http://www.shiningstarsnetwork.org/images/AndrewXmas.JPG")),
+            INSPhoto(imageURL: URL(string: "http://www.shiningstarsnetwork.org/images/rotaryclub.jpeg"), thumbnailImageURL: URL(string: "http://www.shiningstarsnetwork.org/images/rotaryclub.jpeg")),
+            INSPhoto(imageURL: URL(string: "http://www.shiningstarsnetwork.org/images/Cranford-Shining-Stars.jpg"), thumbnailImageURL: URL(string: "http://www.shiningstarsnetwork.org/images/Cranford-Shining-Stars.jpg")),
             INSPhoto(imageURL: URL(string: "http://www.shiningstarsnetwork.org/images/IMG_5380.jpg"), thumbnailImageURL: URL(string: "http://www.shiningstarsnetwork.org/images/IMG_5380.jpg"))
         ]
     }()
@@ -44,6 +49,7 @@ class MediaViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        photos.shuffle()
     }
 }
 
